@@ -15,7 +15,7 @@
 *         @since: 1.0
 */
 
-namespace cjtterabytesoft\theme\adminator;
+namespace cjtterabytesoft\theme\adminskeleton;
 
 use Yii;
 use yii\base\BootstrapInterface;
