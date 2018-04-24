@@ -28,7 +28,7 @@ NavBar::begin([
     'brandLabel' => Yii::$app->name,
     'brandUrl' => Yii::$app->homeUrl,
     'containerOptions' => [
-                           'aria-expanded' => 'false',
+                           'aria-expanded' => 'true',
                            'aria-label' => 'Toggle navigation'
                           ],
     'options' => [
