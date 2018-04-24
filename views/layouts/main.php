@@ -43,7 +43,7 @@ StyleAsset::register($this);
             <?= Html::tag('meta', '', ['content' => 'width=device-width, initial-scale=1, 
                 shrink-to-fit=no', 'name' => 'viewport']) ?>
             <?= Html::csrfMetaTags() ?>
-            <?= Html::tag('title', Html::encode(Yii::t('adminator',$this->title))) ?>
+            <?= Html::tag('title', Html::encode(Yii::t('adminskeleton',$this->title))) ?>
             <!-- Theme style -->
             <?php $this->head() ?>
         <?= Html::endTag('head') ?>

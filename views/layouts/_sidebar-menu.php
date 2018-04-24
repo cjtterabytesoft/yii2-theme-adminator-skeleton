@@ -28,7 +28,7 @@ use yii\helpers\Url;
 <?php
 
 $sidebar_menu[0] = [
-                    'label' => Html::tag('span', html::encode(Yii::t('adminator','Dashboard')), ['class' => 'title']),
+                    'label' => Html::tag('span', html::encode(Yii::t('adminskeleton','Dashboard')), ['class' => 'title']),
                     'icon' => Html::tag('span', Html::tag('i', '', ['class' => 'c-blue-500 ti-home']),
                                   ['class' => 'icon-holder']),
                     'url' => Yii::$app->homeUrl,

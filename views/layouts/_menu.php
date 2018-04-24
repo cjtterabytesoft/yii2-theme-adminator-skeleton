@@ -26,26 +26,26 @@ use yii\helpers\Html;
 $menuItems = [
     [
      'label' => Html::tag('i', '', ['class' => 'fa fa-home fa-lg']) . ' ' .  
-                Yii::t('adminator', 'Home'), 'url' => ['/site/index']
+                Yii::t('adminskeleton', 'Home'), 'url' => ['/site/index']
     ],
     [
      'label' => Html::tag('i', '', ['class' => 'fa fa-spinner fa-lg fa-spin']) . ' ' .  
-                Yii::t('adminator', 'About Us'), 'url' => ['/site/about']
+                Yii::t('adminskeleton', 'About Us'), 'url' => ['/site/about']
     ],
     [
      'label' => Html::tag('i', '', ['class' => 'fa fa-envelope fa-lg']) . ' ' . 
-                Yii::t('adminator', 'Contact'), 'url' => ['/site/contact']
+                Yii::t('adminskeleton', 'Contact'), 'url' => ['/site/contact']
     ],
 ]; 
 
 if (Yii::$app->user->isGuest) {
     $menuItems[] = [
                     'label' => Html::tag('i', '', ['class' => 'ion-android-person-add fa-lg']) . ' ' . 
-                               Yii::t('adminator', 'Signup'), 'url' => ['/site/signup']
+                               Yii::t('adminskeleton', 'Signup'), 'url' => ['/site/signup']
                    ];
     $menuItems[] = [
                     'label' => Html::tag('i', '', ['class' => 'fa fa-sign-in fa-lg']) . ' ' . 
-                               Yii::t('adminator', 'Login'), 'url' => ['/site/login']
+                               Yii::t('adminskeleton', 'Login'), 'url' => ['/site/login']
                    ];
     } else {
         $baseimg = Yii::$app->session->get('user.avatar60');
@@ -55,12 +55,12 @@ if (Yii::$app->user->isGuest) {
                         'items' => [
                                     [
                                      'label' => Html::tag('i', '', ['class' => 'fa fa-user fa-lg']) . ' ' . 
-                                                Yii::t('adminator', 'User Profile'), 
+                                                Yii::t('adminskeleton', 'User Profile'), 
                                      'url' => ['/user/settings/profile']
                                     ],
                                     [
                                      'label' => Html::tag('i', '', ['class' => 'fa fa-sign-out fa-lg']) . ' ' . 
-                                                Yii::t('adminator', 'Logout'), 
+                                                Yii::t('adminskeleton', 'Logout'), 
                                      'url' => ['/site/logout'], 
                                      'linkOptions' => ['data-method' => 'post']
                                     ],

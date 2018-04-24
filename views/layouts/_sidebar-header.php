@@ -32,7 +32,7 @@ use yii\helpers\Url;
                         <?= Html::endTag('div') ?>
                     <?= Html::endTag('div') ?>
                     <?= Html::begintag('div', ['class' => 'peer peer-greed']) ?>
-                        <?= Html::tag('h5', html::encode(Yii::t('adminator','Adminator')),
+                        <?= Html::tag('h5', html::encode(Yii::t('adminskeleton','Adminator')),
                             ['class' => 'lh-1 mB-0 logo-text']) ?>
                     <?= Html::endTag('div') ?>
                 <?= Html::endTag('div') ?>
