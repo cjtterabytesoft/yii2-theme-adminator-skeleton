@@ -27,8 +27,8 @@ class Bootstrap implements BootstrapInterface
     public function bootstrap($app)
     {
         /* Config Translation */
-        if (!isset($app->get('i18n')->translations['adminator*'])) {
-            $app->get('i18n')->translations['adminator*'] = [
+        if (!isset($app->get('i18n')->translations['adminskeleton*'])) {
+            $app->get('i18n')->translations['adminskeleton*'] = [
                 'class'    => PhpMessageSource::className(),
                 'basePath' => __DIR__ . '/messages',
             ];
@@ -36,7 +36,7 @@ class Bootstrap implements BootstrapInterface
 
         /* Copy Avatar Images */
         if (\yii\helpers\BaseFileHelper::filterPath(\Yii::getAlias('@frontend/web/images'), $options = [])) {
-            \yii\helpers\BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/theme/adminator/images/'),
+            \yii\helpers\BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/theme/adminskeleton/images/'),
                 \Yii::getAlias('@frontend/web/images'));
         }
 
