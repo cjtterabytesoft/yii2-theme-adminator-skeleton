@@ -23,6 +23,18 @@ use yii\helpers\Html;
 <!- MENU - START !->
 <?php $user = \yii::$app->user->identity; 
 
+NavBar::begin([
+    'brandLabel' => Yii::$app->name,
+    'brandUrl' => Yii::$app->homeUrl,
+    'containerOptions' => [
+                           'aria-expanded' => 'false',
+                           'aria-label' => 'Toggle navigation'
+                          ],
+    'options' => [
+        'class' => 'navbar navbar-dark bg-dark',
+    ],
+]);
+
 $menuItems = [
     [
      'label' => Html::tag('i', '', ['class' => 'fa fa-home fa-lg']) . ' ' .  
@@ -73,5 +85,7 @@ echo Nav::widget([
     'items' => $menuItems,
     'encodeLabels'=>false,
 ]);
+
+NavBar::end();
 ?>
 <!- MENU - END !->        

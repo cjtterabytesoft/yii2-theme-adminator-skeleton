@@ -76,8 +76,8 @@ StyleAsset::register($this);
                     <?= Html::endTag('div') ?>
                     <!- END - PAGE-CONTAINER -!>
                     <?php else: ?>
-                        <!- HEADER !->
-                        <?= $this->render('_header') ?>
+                        <!- MENU !->
+                        <?= $this->render('_menu') ?>
                         <!- SECTION-WRAP !->
                         <?= Html::beginTag('section', ['class' => 'wrap']) ?>
                             <?= Html::beginTag('div', ['class' => 'container']) ?>
