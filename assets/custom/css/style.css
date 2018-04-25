@@ -62,7 +62,7 @@
     float: left ;
     padding: 5px;
 }
-.skin-black .main-footer .pull-left-custom .iconos{
+.skin-black .main-footer .pull-left-custom .ico {
     color: #343a40;
     padding: 3px;
 }
@@ -70,7 +70,7 @@
     float: right ;
     padding: 5px;
 }
-.skin-black .main-footer  .pull-right-custom .iconos{
+.skin-black .main-footer  .pull-right-custom .ico {
     color: #343a40;
     padding: 3px;
 }
