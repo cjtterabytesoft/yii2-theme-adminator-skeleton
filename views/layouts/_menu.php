@@ -27,12 +27,9 @@ use yii\helpers\Html;
 NavBar::begin([
     'brandLabel' => Yii::$app->name,
     'brandUrl' => Yii::$app->homeUrl,
-    'containerOptions' => [
-                           'aria-expanded' => 'true',
-                           'aria-label' => 'Toggle navigation'
-                          ],
+    'containerOptions' => ['aria-label' => 'Toggle navigation'],
     'options' => [
-        'class' => 'navbar navbar-dark bg-dark',
+        'class' => 'navbar navbar-expand-lg navbar-dark bg-dark',
     ],
 ]);
 
@@ -82,11 +79,11 @@ if (Yii::$app->user->isGuest) {
 }
 
 echo Nav::widget([
-    'options' => ['class' => 'justify-content-end'],
+    'options' => ['class' => 'navbar-nav justify-content-end ml-auto'],
     'items' => $menuItems,
     'encodeLabels'=>false,
 ]);
 
 NavBar::end();
 ?>
-<!- MENU - END !->        
+<!- MENU - END !->
