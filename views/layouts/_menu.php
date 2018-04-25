@@ -79,7 +79,7 @@ if (Yii::$app->user->isGuest) {
 }
 
 echo Nav::widget([
-    'options' => ['class' => 'navbar-nav justify-content-end ml-auto'],
+    'options' => ['class' => 'navbar-nav pull-right ml-auto'],
     'items' => $menuItems,
     'encodeLabels'=>false,
 ]);
