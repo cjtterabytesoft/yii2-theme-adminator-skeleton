@@ -143,13 +143,13 @@
 /* NAVBAR CUSTOM                                                                                                      */
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-.skin-black .main-header > .navbar .navbar-header {
+.skin-black > .navbar .navbar-header {
     background-color: #fff;
 }
-.skin-black .main-header > .navbar .navbar-nav > li > a {
+.skin-black > .navbar .navbar-nav > li > a {
     color: darkgray;
 }
-.skin-black .main-header > .navbar .nav > .active > a {
+.skin-black > .navbar .nav > .active > a {
     color: #111111;
 }
 

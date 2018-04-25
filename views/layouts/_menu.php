@@ -29,7 +29,7 @@ NavBar::begin([
     'brandUrl' => Yii::$app->homeUrl,
     'containerOptions' => ['aria-label' => 'Toggle navigation'],
     'options' => [
-        'class' => 'navbar navbar-expand-lg navbar-dark bg-dark',
+        'class' => 'navbar navbar-expand-lg',
     ],
 ]);
 
