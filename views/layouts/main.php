@@ -97,6 +97,8 @@ StyleAsset::register($this);
                             <!- END - SECTION-CONTENT !->
                         <?= Html::endTag('section') ?>
                         <!- END - SECTION-WRAP !->
+                        <!- FOOTER !->
+                        <?= $this->render('_footer') ?>                        
                 <?php endif; ?>
             <?= Html::endTag('body') ?>
             <!- END - BODY -!>
