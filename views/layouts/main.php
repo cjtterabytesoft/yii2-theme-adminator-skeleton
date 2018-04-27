@@ -50,13 +50,13 @@ StyleAsset::register($this);
         <!- END - HEAD -!>
         <?php $this->beginBody() ?>
             <!- BODY !->
-            <?= Html::begintag('body', ['class' => (!Yii::$app->user->isGuest) ? 'app '
-                : \yii::$app->params['AdminatorSkinFrontend']]) ?>
-                <?php if (!Yii::$app->user->isGuest): ?>
-                    <?= Html::beginTag('div', ['id' => 'loader']) ?>
-                        <?= Html::beginTag('div', ['class' => 'spinner']) ?>
-                        <?= Html::endTag('div') ?>
+            <?= Html::begintag('body', ['class' => 'app ' . yii::$app->params['AdminatorSkinFrontend']]) ?>
+                <!- LOADER SCRIPT !->
+                <?= Html::beginTag('div', ['id' => 'loader']) ?>
+                    <?= Html::beginTag('div', ['class' => 'spinner']) ?>
                     <?= Html::endTag('div') ?>
+                <?= Html::endTag('div') ?>
+                <?php if (!Yii::$app->user->isGuest): ?>
                     <?= Html::beginTag('div') ?>
                         <!- SIDEBAR !->
                         <?= $this->render('_sidebar') ?>
@@ -84,17 +84,15 @@ StyleAsset::register($this);
                                 <!- WIDGET-BREADCRUMBS !->
                                 <?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ?
                                     $this->params['breadcrumbs'] : []]) ?>
-                            <?= Html::endTag('div') ?>
-                            <!- SECTION-CONTENT !->
-                            <?= Html::beginTag('section', ['class' => 'content']) ?>
-                                <?= Html::beginTag('div', ['class' => 'container']) ?>
-                                    <!- CONTENT !->
-                                    <?= $content ?>
-                                    <!- ALERT-WIDGET !->
-                                    <?= Alert::widget()?>
-                                <?= Html::endTag('div') ?>
-                            <?= Html::endTag('section') ?>
-                            <!- END - SECTION-CONTENT !->
+                            	<!- SECTION-CONTENT !->
+                            	<?= Html::beginTag('section', ['class' => 'content']) ?>
+                                	<!- CONTENT !->
+                                	<?= $content ?>
+                                	<!- ALERT-WIDGET !->
+                                	<?= Alert::widget()?>
+                            	<?= Html::endTag('section') ?>
+                            	<!- END - SECTION-CONTENT !->
+                            <?= Html::endTag('div') ?>        
                         <?= Html::endTag('section') ?>
                         <!- END - SECTION-WRAP !->
                         <!- FOOTER !->

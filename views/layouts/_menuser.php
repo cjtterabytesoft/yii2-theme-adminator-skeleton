@@ -59,7 +59,7 @@ use yii\helpers\Url;
                                            $options = ['class' => 'w-2r bdrs-50p']) .
                                    html::endTag('div') .                           
                                    html::begintag('div', ['class' => 'peer']) .
-                                       html::tag('span', \yii::$app->user->identity->username,
+                                       html::tag('span', yii::$app->user->identity->username,
                                            $options = ['class' => 'fsz-sm c-grey-900']) .
                                    html::endTag('div'),                           
                         'options'=> ['class'=>''],

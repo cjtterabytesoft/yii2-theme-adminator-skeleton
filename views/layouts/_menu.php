@@ -22,7 +22,7 @@ use yii\helpers\Html;
 ?>
 
 <!- MENU - START !->
-<?php $user = \yii::$app->user->identity; 
+<?php $user = yii::$app->user->identity; 
 
 NavBar::begin([
     'brandLabel' => Yii::$app->name,
