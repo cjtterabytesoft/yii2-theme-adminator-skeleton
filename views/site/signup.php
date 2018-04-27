@@ -11,7 +11,7 @@
 *    @author: Wilmer Arámbula <cjtterabytellc@gmail.com>
 * @copyright: (c) CJT TERABYTE LLC
 *     @theme: [yii2-theme-adminator-skeleton]
-*      @view: site[Login]
+*      @view: site[Signup]
 *     @since: 1.0
 **/
 
@@ -21,7 +21,7 @@ use yii\helpers\Html;
 ?>
 
 <?= Html::beginTag('div', ['class' => 'peers ai-s fxw-nw h-100vh']) ?>
-    <?= Html::beginTag('div', ['class' => 'd-n@sm- peer peer-greed h-100 pos-r bgr-n bgpX-c bgpY-c bgsz-cv',
+    <?= Html::beginTag('div', ['class' => 'peer peer-greed h-100 pos-r bgr-n bgpX-c bgpY-c bgsz-cv',
         'style' => 'background-image: url("/images/logos/bg.jpg']) ?>
         <?= Html::beginTag('div', ['class' => 'pos-a centerXY']) ?>
             <?= Html::beginTag('div', ['class' => 'bgc-white bdrs-50p pos-r', 
@@ -31,17 +31,14 @@ use yii\helpers\Html;
         <?= Html::endTag('div') ?>
     <?= Html::endTag('div') ?>
     <?= Html::beginTag('div', ['class' => 'col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r',
-        'style' => 'min-width: 320px;']) ?>    
-        <?= Html::beginTag('h4', 'Login', ['class' => 'fw-300 c-grey-900 mB-40']) ?>
-        <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
+        'style' => 'min-width: 320px;']) ?> 
+        <?= Html::beginTag('h4', 'Register', ['class' => 'fw-300 c-grey-900 mB-40']) ?>
+        <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
             <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+            <?= $form->field($model, 'email') ?>
             <?= $form->field($model, 'password')->passwordInput() ?>
-            <?= $form->field($model, 'rememberMe')->checkbox() ?>
-            <?= Html::beginTag('div', ['style' => 'color:#999;margin:1em 0']) ?>
-                If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
-            <?= Html::endTag('div') ?>
             <?= Html::beginTag('div', ['class' => 'form-group']) ?>
-                <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+                <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
             <?= Html::endTag('div') ?>
         <?php ActiveForm::end(); ?>
     <?= Html::endTag('div') ?>

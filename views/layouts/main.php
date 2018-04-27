@@ -57,24 +57,26 @@ StyleAsset::register($this);
                     <?= Html::endTag('div') ?>
                 <?= Html::endTag('div') ?>
                 <?php if (!Yii::$app->user->isGuest): ?>
+                	<!- DIV -!>
                     <?= Html::beginTag('div') ?>
                         <!- SIDEBAR !->
                         <?= $this->render('_sidebar') ?>
+                    	<!- PAGE-CONTAINER -!>
+                    	<?= Html::beginTag('div', ['class' => 'page-container']) ?>
+                        	<!- MENUSER !->
+                        	<?= $this->render('_menuser') ?>
+                        	<?= Html::beginTag('main', ['class' => 'main-content bgc-grey-100']) ?>
+                            	<!- CONTENT !->
+                            	<?= $content ?>
+                            	<!- ALERT-WIDGET !->
+                            	<?= Alert::widget()?>
+                        	<?= Html::endTag('main') ?>
+                        	<!- FOOTER !->
+                        	<?= $this->render('_footer') ?>
+                    	<?= Html::endTag('div') ?>
+                        <!- END - PAGE-CONTAINER -!>
                     <?= Html::endTag('div') ?>
-                    <!- PAGE-CONTAINER -!>
-                    <?= Html::beginTag('div', ['class' => 'page-container']) ?>
-                        <!- MENUSER !->
-                        <?= $this->render('_menuser') ?>
-                        <?= Html::beginTag('main', ['class' => 'main-content bgc-grey-100']) ?>
-                            <!- CONTENT !->
-                            <?= $content ?>
-                            <!- ALERT-WIDGET !->
-                            <?= Alert::widget()?>
-                        <?= Html::endTag('main') ?>
-                        <!- FOOTER !->
-                        <?= $this->render('_footer') ?>
-                    <?= Html::endTag('div') ?>
-                    <!- END - PAGE-CONTAINER -!>
+                    <!- END - DIV -!>
                     <?php else: ?>
                         <!- MENU !->
                         <?= $this->render('_menu') ?>
