@@ -34,13 +34,13 @@ use yii\helpers\Html;
         	<?= Html::beginTag('div', ['class' => 'col-sm ta-r d-none d-sm-inline']) ?>        
 				<?= Html::tag('span', Yii::t('adminskeleton', 'SOCIAL NETWORKS:'), 
 					['class' => 'align-middle','style' => 'padding-right: 5px']) ?>            
-				<?= Html::a('', yii::$app->params['git_user'], 
+				<?= Html::a('', yii::$app->params['Git_User'], 
 					['class' => 'ico fab fa-github fa-w-16 fa-2x align-middle', 'target' => '_blank']) ?>   
-				<?= Html::a('', yii::$app->params['fac_user'], 
+				<?= Html::a('', yii::$app->params['Fac_User'], 
 					['class' => 'ico fab fab fa-facebook-f fa-w-16 fa-2x align-middle', 'target' => '_blank']) ?>
-				<?= Html::a('', yii::$app->params['twi_user'], 
+				<?= Html::a('', yii::$app->params['Twi_User'], 
 					['class' => 'ico fab fa-twitter fa-w-16 fa-2x align-middle', 'target' => '_blank']) ?>                      
-				<?= Html::a('', yii::$app->params['lin_user'], 
+				<?= Html::a('', yii::$app->params['Lin_User'], 
 					['class' => 'ico fab fab fa-linkedin-in fa-w-16 fa-2x align-middle', 'target' => '_blank']) ?> 
            <?= Html::endTag('div') ?>		         
         <?= Html::endTag('div') ?>
