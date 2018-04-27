@@ -32,7 +32,7 @@ use yii\helpers\Html;
     <?= Html::endTag('div') ?>
     <?= Html::beginTag('div', ['class' => 'col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r',
         'style' => 'min-width: 320px;']) ?>    
-        <?= Html::beginTag('h4', 'Login', ['class' => 'fw-300 c-grey-900 mB-40']) ?>
+        <?= Html::tag('h4', 'Login', ['class' => 'fw-300 c-grey-900 mB-40']) ?>
         <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
             <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
             <?= $form->field($model, 'password')->passwordInput() ?>
