@@ -34,16 +34,27 @@ class Bootstrap implements BootstrapInterface
             ];
         }
 
-        /* Copy Avatar Images */
-        if (\yii\helpers\BaseFileHelper::filterPath(\Yii::getAlias('@frontend/web/images'), $options = [])) {
-            \yii\helpers\BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/theme/adminskeleton/images/'),
-                \Yii::getAlias('@frontend/web/images'));
+        /* Config reCaptcha */
+        if (!isset($app->get('reCaptcha'))) {
+            $app->get('reCaptcha') = [
+                'name' => 'reCaptcha',
+                'class' => 'himiklab\yii2\recaptcha\ReCaptcha',
+                'siteKey' => '6LeIIVYUAAAAAED16FV5lK5j0b1ro34cNUZbFURQ',
+                'secret' => '6LeIIVYUAAAAAOinzkRv0wB7Ta01VKT7DeSayRPc',
+            ];
         }
 
+        /* Default Controller Theme */
         if (!Yii::$app->user->isGuest) {
             yii::$app->defaultRoute = ('/adminskeleton/pages/dashboard');
             } else {
                 yii::$app->defaultRoute = ('site/index');
+        }
+
+        /* Copy Avatar Images */
+        if (\yii\helpers\BaseFileHelper::filterPath(\Yii::getAlias('@frontend/web/images'), $options = [])) {
+            \yii\helpers\BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/theme/adminskeleton/images/'),
+                \Yii::getAlias('@frontend/web/images'));
         }
     }
 }
