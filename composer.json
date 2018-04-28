@@ -18,7 +18,8 @@
         "bower-asset/bootbox": "*",
         "bower-asset/Font-Awesome": "*",
         "bower-asset/ionicons": "*",
-        "bower-asset/themify-icons": "*"
+        "bower-asset/themify-icons": "*",
+        "himiklab/yii2-recaptcha-widget" : "*"
     },
     "autoload": {
         "psr-4": {
