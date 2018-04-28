@@ -17,6 +17,10 @@
 
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;
+use yii\widgets\Breadcrumbs;
+
+$this->title = 'Login';
+$this->params['breadcrumbs_theme'][] = $this->title;
 
 ?>
 
@@ -32,6 +36,8 @@ use yii\helpers\Html;
     <?= Html::endTag('div') ?>
     <?= Html::beginTag('div', ['class' => 'col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r',
         'style' => 'min-width: 320px;']) ?>    
+        <?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs_theme']) ?
+            $this->params['breadcrumbs_theme'] : []]) ?>         
         <?= Html::tag('h4', 'Login', ['class' => 'fw-300 c-grey-900 mB-40']) ?>
         <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
             <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>

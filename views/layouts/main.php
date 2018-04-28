@@ -78,11 +78,15 @@ StyleAsset::register($this);
                     <?= Html::endTag('div') ?>
                     <!- END - DIV -!>
                     <?php else: ?>
-                        <!- MENU !->
-                        <?= $this->render('_menu') ?>
-                        <!- SECTION-WRAP !->
-                        <?= Html::beginTag('section', ['class' => 'wrap']) ?>
-                            <?= Html::beginTag('div', ['class' => 'container']) ?>
+                        <?php if ((Yii::$app->controller->action->id !== 'signup') && 
+                            (Yii::$app->controller->action->id !== 'login')): ?>
+                            <!- MENU !->
+                            <?= $this->render('_menu') ?>
+                        <?php endif; ?>    
+                        <!- SECTION !->
+                        <?= Html::beginTag('section', ['class' => 'peers ai-s fxw-nw h-100vh']) ?>
+                            <?= Html::beginTag('div', ['class' => ((Yii::$app->controller->action->id == 'signup') || 
+                                (Yii::$app->controller->action->id == 'login')) ? 'container-fluid' : 'container']) ?>
                                 <!- WIDGET-BREADCRUMBS !->
                                 <?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ?
                                     $this->params['breadcrumbs'] : []]) ?>
@@ -96,7 +100,7 @@ StyleAsset::register($this);
                             	<!- END - SECTION-CONTENT !->
                             <?= Html::endTag('div') ?>        
                         <?= Html::endTag('section') ?>
-                        <!- END - SECTION-WRAP !->
+                        <!- END - SECTION !->
                         <!- FOOTER !->
                         <?= $this->render('_footer') ?>                        
                 <?php endif; ?>

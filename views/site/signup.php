@@ -17,6 +17,10 @@
 
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;
+use yii\widgets\Breadcrumbs;
+
+$this->title = 'Register';
+$this->params['breadcrumbs_theme'][] = $this->title;
 
 ?>
 
