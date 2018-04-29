@@ -15,7 +15,7 @@
 *     @since: 1.0
 **/
 
-use himiklab\yii2\recaptcha;
+use himiklab\yii2\recaptcha\ReCaptcha;
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
@@ -44,7 +44,7 @@ $this->params['breadcrumbs_theme'][] = $this->title;
             <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
             <?= $form->field($model, 'password')->passwordInput() ?>
             <?= $form->field($model, 'rememberMe')->checkbox() ?>
-            <?= ReCaptcha::widget(['name' => 'reCaptcha']) ?>
+            <?= $form->field($model, 'reCaptcha')->widget(\himiklab\yii2\recaptcha\ReCaptcha::className()) ?>
             <?= Html::beginTag('div', ['style' => 'color:#999;margin:1em 0']) ?>
                 If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
             <?= Html::endTag('div') ?>

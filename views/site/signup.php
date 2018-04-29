@@ -15,6 +15,7 @@
 *     @since: 1.0
 **/
 
+use himiklab\yii2\recaptcha\ReCaptcha;
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
@@ -43,6 +44,7 @@ $this->params['breadcrumbs_theme'][] = $this->title;
             <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
             <?= $form->field($model, 'email') ?>
             <?= $form->field($model, 'password')->passwordInput() ?>
+			<?= $form->field($model, 'reCaptcha')->widget(\himiklab\yii2\recaptcha\ReCaptcha::className()) ?>        
             <?= Html::beginTag('div', ['class' => 'form-group']) ?>
                 <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
             <?= Html::endTag('div') ?>

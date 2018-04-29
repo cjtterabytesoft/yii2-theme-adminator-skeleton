@@ -33,16 +33,13 @@ class Bootstrap implements BootstrapInterface
                 'basePath' => __DIR__ . '/messages',
             ];
         }
-
         /* Config reCaptcha */
-        if (!isset($app->get('reCaptcha'))) {
-            $app->get('reCaptcha') = [
-                'name' => 'reCaptcha',
-                'class' => 'himiklab\yii2\recaptcha\ReCaptcha',
-                'siteKey' => '6LeIIVYUAAAAAED16FV5lK5j0b1ro34cNUZbFURQ',
-                'secret' => '6LeIIVYUAAAAAOinzkRv0wB7Ta01VKT7DeSayRPc',
-            ];
-        }
+        $app->set('reCaptcha', [
+            'name' => 'reCaptcha',
+            'class' => 'himiklab\yii2\recaptcha\ReCaptcha',
+            'siteKey' => '6LeIIVYUAAAAAED16FV5lK5j0b1ro34cNUZbFURQ',
+            'secret' => '6LeIIVYUAAAAAOinzkRv0wB7Ta01VKT7DeSayRPc',
+        ]);
 
         /* Default Controller Theme */
         if (!Yii::$app->user->isGuest) {
