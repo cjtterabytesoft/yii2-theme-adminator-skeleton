@@ -28,23 +28,24 @@ use yii\helpers\Url;
 <?php
 
 $sidebar_menu[0] = [
-                    'label' => Html::tag('span', html::encode(Yii::t('adminskeleton','Dashboard')), ['class' => 'title']),
-                    'icon' => Html::tag('span', Html::tag('i', '', ['class' => 'c-blue-500 ti-home']),
-                                  ['class' => 'icon-holder']),
-                    'url' => Yii::$app->homeUrl,
-                    'linkOptions'=> ['class'=>'sidebar-link'],
-                    'options' =>['class' => 'nav-item']
-                   ];
+					'label' => Html::tag('span', html::encode(Yii::t('adminskeleton','Dashboard')),
+							   ['class' => 'title']),
+					'icon' => Html::tag('span', Html::tag('i', '', ['class' => 'c-blue-500 ti-home']),
+								  ['class' => 'icon-holder']),
+					'url' => Yii::$app->homeUrl,
+					'linkOptions'=> ['class'=>'sidebar-link'],
+					'options' =>['class' => 'nav-item']
+				   ];
 
 echo MainSidebar::widget([
-    'options'         => ['class' => 'sidebar-menu scrollable pos-r'],
-    'labelTemplate'   => '<a href="#">{icon}{label}{right-icon}</a>',
-    'linkTemplate'    => '<a href="{url}" {linkOptions}>{icon}{label}{right-icon}</a>',
-    'submenuTemplate' => "<ul class=\"dropdown-menu\">{items}</ul>",
-    'activateParents' => true,
-    'encodeLabels'    => false,
-    'items'           => $sidebar_menu,
-    'activeCssClass'  => 'active open',
+	'options'         => ['class' => 'sidebar-menu scrollable pos-r'],
+	'labelTemplate'   => '<a href="#">{icon}{label}{right-icon}</a>',
+	'linkTemplate'    => '<a href="{url}" {linkOptions}>{icon}{label}{right-icon}</a>',
+	'submenuTemplate' => "<ul class=\"dropdown-menu\">{items}</ul>",
+	'activateParents' => true,
+	'encodeLabels'    => false,
+	'items'           => $sidebar_menu,
+	'activeCssClass'  => 'active open',
 ]);
 
 ?>

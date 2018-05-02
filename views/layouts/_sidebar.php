@@ -21,11 +21,11 @@ use yii\helpers\Html;
 
 <!- SIDEBAR - START -!>
 <?= Html::begintag('div', ['class' => 'sidebar']) ?>
-    <?= Html::begintag('div', ['class' => 'sidebar-inner']) ?>
-        <!- SIDEBAR-HEADER -!>
-        <?= $this->render('_sidebar-header') ?>
-        <!- SIDEBAR-MENU -!>
-        <?= $this->render('_sidebar-menu') ?>
-    <?= Html::endTag('div') ?>
+	<?= Html::begintag('div', ['class' => 'sidebar-inner']) ?>
+		<!- SIDEBAR-HEADER -!>
+		<?= $this->render('_sidebar-header') ?>
+		<!- SIDEBAR-MENU -!>
+		<?= $this->render('_sidebar-menu') ?>
+	<?= Html::endTag('div') ?>
 <?= Html::endTag('div') ?>
 <!- SIDEBAR - END -!>

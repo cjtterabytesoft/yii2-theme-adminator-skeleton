@@ -23,35 +23,35 @@ use yii\i18n\PhpMessageSource;
 
 class Bootstrap implements BootstrapInterface
 {
-    /** @inheritdoc */
-    public function bootstrap($app)
-    {
-        /* Config Translation */
-        if (!isset($app->get('i18n')->translations['adminskeleton*'])) {
-            $app->get('i18n')->translations['adminskeleton*'] = [
-                'class'    => PhpMessageSource::className(),
-                'basePath' => __DIR__ . '/messages',
-            ];
-        }
-        /* Config reCaptcha */
-        $app->set('reCaptcha', [
-            'name' => 'reCaptcha',
-            'class' => 'himiklab\yii2\recaptcha\ReCaptcha',
-            'siteKey' => '6LeIIVYUAAAAAED16FV5lK5j0b1ro34cNUZbFURQ',
-            'secret' => '6LeIIVYUAAAAAOinzkRv0wB7Ta01VKT7DeSayRPc',
-        ]);
+	/** @inheritdoc */
+	public function bootstrap($app)
+	{
+		/* Config Translation */
+		if (!isset($app->get('i18n')->translations['adminskeleton*'])) {
+			$app->get('i18n')->translations['adminskeleton*'] = [
+				'class'    => PhpMessageSource::className(),
+				'basePath' => __DIR__ . '/messages',
+			];
+		}
+		/* Config reCaptcha */
+		$app->set('reCaptcha', [
+			'name' => 'reCaptcha',
+			'class' => 'himiklab\yii2\recaptcha\ReCaptcha',
+			'siteKey' => '6LeIIVYUAAAAAED16FV5lK5j0b1ro34cNUZbFURQ',
+			'secret' => '6LeIIVYUAAAAAOinzkRv0wB7Ta01VKT7DeSayRPc',
+		]);
 
-        /* Default Controller Theme */
-        if (!Yii::$app->user->isGuest) {
-            yii::$app->defaultRoute = ('/adminskeleton/pages/dashboard');
-            } else {
-                yii::$app->defaultRoute = ('site/index');
-        }
+		/* Default Controller Theme */
+		if (!Yii::$app->user->isGuest) {
+			yii::$app->defaultRoute = ('/adminskeleton/pages/dashboard');
+			} else {
+				yii::$app->defaultRoute = ('site/index');
+		}
 
-        /* Copy Avatar Images */
-        if (\yii\helpers\BaseFileHelper::filterPath(\Yii::getAlias('@frontend/web/images'), $options = [])) {
-            \yii\helpers\BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/theme/adminskeleton/images/'),
-                \Yii::getAlias('@frontend/web/images'));
-        }
-    }
+		/* Copy Avatar Images */
+		if (\yii\helpers\BaseFileHelper::filterPath(\Yii::getAlias('@frontend/web/images'), $options = [])) {
+			\yii\helpers\BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/theme/adminskeleton/images/'),
+				\Yii::getAlias('@frontend/web/images'));
+		}
+	}
 }

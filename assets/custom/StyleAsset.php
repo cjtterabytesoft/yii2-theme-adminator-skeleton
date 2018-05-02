@@ -21,20 +21,20 @@ use yii\web\AssetBundle;
 
 class StyleAsset extends AssetBundle
 {
-    public $sourcePath = '@cjtterabytesoft/theme/adminskeleton/assets/custom/';
+	public $sourcePath = '@cjtterabytesoft/theme/adminskeleton/assets/custom/';
 
-    public $css = [
-        'css/style.css',
-    ];
+	public $css = [
+		'css/style.css',
+	];
 
-    public $js = [
-        'js/style.js',
-    ];
+	public $js = [
+		'js/style.js',
+	];
 
-    public $publishOptions = [
-        'only' => [
-            'style.css',
-            'style.js',
-        ],
-    ];
+	public $publishOptions = [
+		'only' => [
+			'style.css',
+			'style.js',
+		],
+	];
 }

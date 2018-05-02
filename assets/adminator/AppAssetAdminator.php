@@ -21,20 +21,20 @@ use yii\web\AssetBundle;
 
 class AppAssetAdminator extends AssetBundle
 {
-    public $sourcePath = '@cjtterabytesoft/theme/adminskeleton/assets/adminator/';
+	public $sourcePath = '@cjtterabytesoft/theme/adminskeleton/assets/adminator/';
 
-    public $css = [
-        'css/site-adminator.css',
-    ];
+	public $css = [
+		'css/site-adminator.css',
+	];
 
-    public $js = [
-        'js/site-adminator.js',
-    ];
+	public $js = [
+		'js/site-adminator.js',
+	];
 
-    public $publishOptions = [
-        'only' => [
-            'css/*',
-            'js/*',
-        ],
-    ];
+	public $publishOptions = [
+		'only' => [
+			'css/*',
+			'js/*',
+		],
+	];
 }

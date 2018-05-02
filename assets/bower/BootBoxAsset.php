@@ -21,15 +21,15 @@ use yii\web\AssetBundle;
 
 class BootBoxAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/bower-asset/bootbox/';
+	public $sourcePath = '@vendor/bower-asset/bootbox/';
 
-    public $js = [
-        'bootbox.js',
-    ];
+	public $js = [
+		'bootbox.js',
+	];
 
-    public $publishOptions = [
-        'only' => [
-            'bootbox.js',
-        ],
-    ];
+	public $publishOptions = [
+		'only' => [
+			'bootbox.js',
+		],
+	];
 }

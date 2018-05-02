@@ -22,66 +22,66 @@ use yii\helpers\Html;
 ?>
 
 <!- MENU - START !->
-<?php $user = yii::$app->user->identity; 
+<?php $user = yii::$app->user->identity;
 
 NavBar::begin([
-    'brandLabel' => Yii::$app->name,
-    'brandUrl' => Yii::$app->homeUrl,
-    'containerOptions' => ['aria-label' => 'Toggle navigation'],
-    'options' => [
-        'class' => 'navbar navbar-expand-lg',
-    ],
+	'brandLabel' => Yii::$app->name,
+	'brandUrl' => Yii::$app->homeUrl,
+	'containerOptions' => ['aria-label' => 'Toggle navigation'],
+	'options' => [
+		'class' => 'navbar navbar-expand-lg',
+   ],
 ]);
 
 $menuItems = [
-    [
-     'label' => Html::tag('i', '', ['class' => 'fa fa-home fa-lg']) . ' ' .  
-                Yii::t('adminskeleton', 'Home'), 'url' => ['/site/index']
-    ],
-    [
-     'label' => Html::tag('i', '', ['class' => 'fa fa-spinner fa-lg fa-spin']) . ' ' .  
-                Yii::t('adminskeleton', 'About Us'), 'url' => ['/site/about']
-    ],
-    [
-     'label' => Html::tag('i', '', ['class' => 'fa fa-envelope fa-lg']) . ' ' . 
-                Yii::t('adminskeleton', 'Contact'), 'url' => ['/site/contact']
-    ],
-]; 
+	[
+	 'label' => Html::tag('i', '', ['class' => 'fa fa-home fa-lg']) . ' ' .
+				Yii::t('adminskeleton', 'Home'), 'url' => ['/site/index']
+	],
+	[
+	 'label' => Html::tag('i', '', ['class' => 'fa fa-spinner fa-lg fa-spin']) . ' ' .
+				Yii::t('adminskeleton', 'About Us'), 'url' => ['/site/about']
+	],
+	[
+	 'label' => Html::tag('i', '', ['class' => 'fa fa-envelope fa-lg']) . ' ' .
+				Yii::t('adminskeleton', 'Contact'), 'url' => ['/site/contact']
+	],
+];
 
 if (Yii::$app->user->isGuest) {
-    $menuItems[] = [
-                    'label' => Html::tag('i', '', ['class' => 'ion-android-person-add fa-lg']) . ' ' . 
-                               Yii::t('adminskeleton', 'Signup'), 'url' => ['/site/signup']
-                   ];
-    $menuItems[] = [
-                    'label' => Html::tag('i', '', ['class' => 'fa fa-sign-in fa-lg']) . ' ' . 
-                               Yii::t('adminskeleton', 'Login'), 'url' => ['/site/login']
-                   ];
-    } else {
-        $baseimg = Yii::$app->session->get('user.avatar60');
-        $menuItems[] = [
-                        'label' => $user->username . ' ' . Html::img($baseimg, 
-                                   $options = ['class'=>'img-rounded', 'aria-expanded'=>'false']),
-                        'items' => [
-                                    [
-                                     'label' => Html::tag('i', '', ['class' => 'fa fa-user fa-lg']) . ' ' . 
-                                                Yii::t('adminskeleton', 'User Profile'), 
-                                     'url' => ['/user/settings/profile']
-                                    ],
-                                    [
-                                     'label' => Html::tag('i', '', ['class' => 'fa fa-sign-out fa-lg']) . ' ' . 
-                                                Yii::t('adminskeleton', 'Logout'), 
-                                     'url' => ['/site/logout'], 
-                                     'linkOptions' => ['data-method' => 'post']
-                                    ],
-                                   ],
-                       ];
+	$menuItems[] = [
+					'label' => Html::tag('i', '', ['class' => 'ion-android-person-add fa-lg']) . ' ' .
+							   Yii::t('adminskeleton', 'Signup'), 'url' => ['/site/signup']
+				   ];
+	$menuItems[] = [
+					'label' => Html::tag('i', '', ['class' => 'fa fa-sign-in fa-lg']) . ' ' .
+							   Yii::t('adminskeleton', 'Login'), 'url' => ['/site/login']
+				   ];
+	} else {
+		$baseimg = Yii::$app->session->get('user.avatar60');
+		$menuItems[] = [
+						'label' => $user->username . ' ' . Html::img($baseimg, 
+								   $options = ['class'=>'img-rounded', 'aria-expanded'=>'false']),
+						'items' => [
+									[
+									 'label' => Html::tag('i', '', ['class' => 'fa fa-user fa-lg']) . ' ' .
+												Yii::t('adminskeleton', 'User Profile'), 
+									 'url' => ['/user/settings/profile']
+									],
+									[
+									 'label' => Html::tag('i', '', ['class' => 'fa fa-sign-out fa-lg']) . ' ' .
+												Yii::t('adminskeleton', 'Logout'),
+									 'url' => ['/site/logout'], 
+									 'linkOptions' => ['data-method' => 'post']
+									],
+								   ],
+					   ];
 }
 
 echo Nav::widget([
-    'options' => ['class' => 'navbar-nav pull-right ml-auto'],
-    'items' => $menuItems,
-    'encodeLabels'=>false,
+	'options' => ['class' => 'navbar-nav pull-right ml-auto'],
+	'items' => $menuItems,
+	'encodeLabels'=>false,
 ]);
 
 NavBar::end();

@@ -32,25 +32,25 @@ use yii\web\Controller;
 class PagesController extends Controller
 {
 
-    public $defaultAction = 'dashboard';
+	public $defaultAction = 'dashboard';
 
-    public function actions()
-    {
-        return [
-            'error' => [
-                'class' => 'yii\web\ErrorAction',
-            ],
-        ];
-    }
+	public function actions()
+	{
+		return [
+			'error' => [
+				'class' => 'yii\web\ErrorAction',
+			],
+		];
+	}
 
-    /**
-    * Displays Dashboard.
-    *
-    * @return mixed
-    **/
+	/**
+	* Displays Dashboard.
+	*
+	* @return mixed
+	**/
 
-    public function actionDashboard()
-    {
-        return $this->render('dashboard');
-    }
+	public function actionDashboard()
+	{
+		return $this->render('dashboard');
+	}
 }

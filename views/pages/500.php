@@ -21,17 +21,17 @@ use yii\helpers\Html;
 
 <!- 500 !->
 <?= Html::beginTag('div', ['class' => 'pos-a t-0 l-0 bgc-white w-100 h-100 d-f fxd-r fxw-w ai-c jc-c pos-r p-30']) ?>
-    <?= Html::beginTag('div', ['class' => 'mR-60']) ?>
-        <?= html::img('/images/logos/500.png', $options = ['alt' => '#']) ?>
-    <?= Html::endTag('div') ?>
-    <?= Html::beginTag('div', ['class' => 'd-f jc-c fxd-c']) ?>
-        <?= Html::tag('h1', '500', ['class' => 'mB-30 fw-900 lh-1 c-red-500', 'style' => 'font-size: 60px;']) ?>
-        <?= Html::tag('h3', 'Internal server error', ['class' => 'mB-10 fsz-lg c-grey-900 tt-c']) ?>
-        <?= Html::tag('p', 'Something goes wrong with our servers, please try again later.', 
-            ['class' => 'mB-30 fsz-def c-grey-700']) ?>
-        <?= Html::beginTag('div') ?>
-            <?= Html::a('Go to Home', Yii::$app->homeUrl, ['class' => 'btn btn-primary', 'type' => 'primary']) ?>
-        <?= Html::endTag('div') ?>
-    <?= Html::endTag('div') ?>
+	<?= Html::beginTag('div', ['class' => 'mR-60']) ?>
+		<?= html::img('/images/logos/500.png', $options = ['alt' => '#']) ?>
+	<?= Html::endTag('div') ?>
+	<?= Html::beginTag('div', ['class' => 'd-f jc-c fxd-c']) ?>
+		<?= Html::tag('h1', '500', ['class' => 'mB-30 fw-900 lh-1 c-red-500', 'style' => 'font-size: 60px;']) ?>
+		<?= Html::tag('h3', 'Internal server error', ['class' => 'mB-10 fsz-lg c-grey-900 tt-c']) ?>
+		<?= Html::tag('p', 'Something goes wrong with our servers, please try again later.', 
+			['class' => 'mB-30 fsz-def c-grey-700']) ?>
+		<?= Html::beginTag('div') ?>
+			<?= Html::a('Go to Home', Yii::$app->homeUrl, ['class' => 'btn btn-primary', 'type' => 'primary']) ?>
+		<?= Html::endTag('div') ?>
+	<?= Html::endTag('div') ?>
 <?= Html::endTag('div') ?>
 <!- END - 500 !->

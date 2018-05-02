@@ -21,32 +21,32 @@ use yii\web\AssetBundle;
 
 class AdminatorAsset extends AssetBundle
 {
-    public $sourcePath = '@cjtterabytesoft/theme/adminskeleton/assets/adminator/';
+	public $sourcePath = '@cjtterabytesoft/theme/adminskeleton/assets/adminator/';
 
-    public $css = [
-        'css/adminator.css',
-    ];
+	public $css = [
+		'css/adminator.css',
+	];
 
-    public $js = [
-        'js/lodash.custom.min.js',
-        'js/adminator.js',
-    ];
+	public $js = [
+		'js/lodash.custom.min.js',
+		'js/adminator.js',
+	];
 
-    public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap4\BootstrapAsset',
-        'yii\bootstrap4\BootstrapPluginAsset',
-        'cjtterabytesoft\theme\adminskeleton\assets\bower\BootBoxAsset',
-        'cjtterabytesoft\theme\adminskeleton\assets\bower\FontAwesomeAsset',
-        'cjtterabytesoft\theme\adminskeleton\assets\bower\ThemifyIconsAsset',
-    ];
+	public $depends = [
+		'yii\web\YiiAsset',
+		'yii\bootstrap4\BootstrapAsset',
+		'yii\bootstrap4\BootstrapPluginAsset',
+		'cjtterabytesoft\theme\adminskeleton\assets\bower\BootBoxAsset',
+		'cjtterabytesoft\theme\adminskeleton\assets\bower\FontAwesomeAsset',
+		'cjtterabytesoft\theme\adminskeleton\assets\bower\ThemifyIconsAsset',
+	];
 
-    public $publishOptions = [
-        'only' => [
-            'adminator.css',
-            'adminator.css.map',
-            'lodash.custom.min.js',
-            'adminator.js',
-        ],
-    ];
+	public $publishOptions = [
+		'only' => [
+			'adminator.css',
+			'adminator.css.map',
+			'lodash.custom.min.js',
+			'adminator.js',
+		],
+	];
 }

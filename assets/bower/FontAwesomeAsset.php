@@ -21,20 +21,20 @@ use yii\web\AssetBundle;
 
 class FontAwesomeAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/bower-asset/font-awesome/web-fonts-with-css/';
+	public $sourcePath = '@vendor/bower-asset/font-awesome/web-fonts-with-css/';
 
-    public $css = [
-        'css/fontawesome-all.css',
-    ];
+	public $css = [
+		'css/fontawesome-all.css',
+	];
 
-    public $publishOptions = [
-        'only' => [
-            'css/*',
-            'webfonts/*',
-        ],
-        'except' => [
-            'less',
-            'scss',
-        ],
-    ];
+	public $publishOptions = [
+		'only' => [
+			'css/*',
+			'webfonts/*',
+		],
+		'except' => [
+			'less',
+			'scss',
+		],
+	];
 }

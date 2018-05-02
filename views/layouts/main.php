@@ -34,81 +34,81 @@ StyleAsset::register($this);
 <!- MAIN -!>
 <!- BEGIN-PAGE -!>
 <?php $this->beginPage() ?>
-    <!DOCTYPE html>
-    <!- HTML -!>
-    <?= Html::beginTag('html', ['lang' => Yii::$app->language]) ?>
-        <!- HEAD -!>
-        <?= Html::beginTag('head') ?>
-            <?= Html::tag('meta', '', ['charset' => Yii::$app->charset]) ?>
-            <?= Html::tag('meta', '', ['content' => 'width=device-width, initial-scale=1, 
-                shrink-to-fit=no', 'name' => 'viewport']) ?>
-            <?= Html::csrfMetaTags() ?>
-            <?= Html::tag('title', Html::encode(Yii::t('adminskeleton',$this->title))) ?>
-            <!-- Theme style -->
-            <?php $this->head() ?>
-        <?= Html::endTag('head') ?>
-        <!- END - HEAD -!>
-        <?php $this->beginBody() ?>
-            <!- BODY !->
-            <?= Html::begintag('body', ['class' => 'app ' . yii::$app->params['AdminatorSkinFrontend']]) ?>
-                <!- LOADER SCRIPT !->
-                <?= Html::beginTag('div', ['id' => 'loader']) ?>
-                    <?= Html::beginTag('div', ['class' => 'spinner']) ?>
-                    <?= Html::endTag('div') ?>
-                <?= Html::endTag('div') ?>
-                <?php if (!Yii::$app->user->isGuest): ?>
-                	<!- DIV -!>
-                    <?= Html::beginTag('div') ?>
-                        <!- SIDEBAR !->
-                        <?= $this->render('_sidebar') ?>
-                    	<!- PAGE-CONTAINER -!>
-                    	<?= Html::beginTag('div', ['class' => 'page-container']) ?>
-                        	<!- MENUSER !->
-                        	<?= $this->render('_menuser') ?>
-                        	<?= Html::beginTag('main', ['class' => 'main-content bgc-grey-100']) ?>
-                            	<!- CONTENT !->
-                            	<?= $content ?>
-                            	<!- ALERT-WIDGET !->
-                            	<?= Alert::widget()?>
-                        	<?= Html::endTag('main') ?>
-                        	<!- FOOTER !->
-                        	<?= $this->render('_footer') ?>
-                    	<?= Html::endTag('div') ?>
-                        <!- END - PAGE-CONTAINER -!>
-                    <?= Html::endTag('div') ?>
-                    <!- END - DIV -!>
-                    <?php else: ?>
-                        <?php if ((Yii::$app->controller->action->id !== 'signup') && 
-                            (Yii::$app->controller->action->id !== 'login')): ?>
-                            <!- MENU !->
-                            <?= $this->render('_menu') ?>
-                        <?php endif; ?>    
-                        <!- SECTION !->
-                        <?= Html::beginTag('section', ['class' => 'peers ai-s fxw-nw h-100vh']) ?>
-                            <?= Html::beginTag('div', ['class' => ((Yii::$app->controller->action->id == 'signup') || 
-                                (Yii::$app->controller->action->id == 'login')) ? 'container-fluid' : 'container']) ?>
-                                <!- WIDGET-BREADCRUMBS !->
-                                <?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ?
-                                    $this->params['breadcrumbs'] : []]) ?>
-                            	<!- SECTION-CONTENT !->
-                            	<?= Html::beginTag('section', ['class' => 'content']) ?>
-                                	<!- CONTENT !->
-                                	<?= $content ?>
-                                	<!- ALERT-WIDGET !->
-                                	<?= Alert::widget()?>
-                            	<?= Html::endTag('section') ?>
-                            	<!- END - SECTION-CONTENT !->
-                            <?= Html::endTag('div') ?>        
-                        <?= Html::endTag('section') ?>
-                        <!- END - SECTION !->
-                        <!- FOOTER !->
-                        <?= $this->render('_footer') ?>                        
-                <?php endif; ?>
-            <?= Html::endTag('body') ?>
-            <!- END - BODY -!>
-        <?php $this->endBody() ?>
-    <?= Html::endTag('html') ?>
-    <!- END - HTML -!>
+	<!DOCTYPE html>
+	<!- HTML -!>
+	<?= Html::beginTag('html', ['lang' => Yii::$app->language]) ?>
+		<!- HEAD -!>
+		<?= Html::beginTag('head') ?>
+			<?= Html::tag('meta', '', ['charset' => Yii::$app->charset]) ?>
+			<?= Html::tag('meta', '', ['content' => 'width=device-width, initial-scale=1, 
+				shrink-to-fit=no', 'name' => 'viewport']) ?>
+			<?= Html::csrfMetaTags() ?>
+			<?= Html::tag('title', Html::encode(Yii::t('adminskeleton',$this->title))) ?>
+			<!-- Theme style -->
+			<?php $this->head() ?>
+		<?= Html::endTag('head') ?>
+		<!- END - HEAD -!>
+		<?php $this->beginBody() ?>
+			<!- BODY !->
+			<?= Html::begintag('body', ['class' => 'app ' . yii::$app->params['AdminatorSkinFrontend']]) ?>
+				<!- LOADER SCRIPT !->
+				<?= Html::beginTag('div', ['id' => 'loader']) ?>
+					<?= Html::beginTag('div', ['class' => 'spinner']) ?>
+					<?= Html::endTag('div') ?>
+				<?= Html::endTag('div') ?>
+				<?php if (!Yii::$app->user->isGuest): ?>
+					<!- DIV -!>
+					<?= Html::beginTag('div') ?>
+						<!- SIDEBAR !->
+						<?= $this->render('_sidebar') ?>
+						<!- PAGE-CONTAINER -!>
+						<?= Html::beginTag('div', ['class' => 'page-container']) ?>
+							<!- MENUSER !->
+							<?= $this->render('_menuser') ?>
+							<?= Html::beginTag('main', ['class' => 'main-content bgc-grey-100']) ?>
+								<!- CONTENT !->
+								<?= $content ?>
+								<!- ALERT-WIDGET !->
+								<?= Alert::widget()?>
+							<?= Html::endTag('main') ?>
+							<!- FOOTER !->
+							<?= $this->render('_footer') ?>
+						<?= Html::endTag('div') ?>
+						<!- END - PAGE-CONTAINER -!>
+					<?= Html::endTag('div') ?>
+					<!- END - DIV -!>
+					<?php else: ?>
+						<?php if ((Yii::$app->controller->action->id !== 'signup') && 
+							(Yii::$app->controller->action->id !== 'login')): ?>
+							<!- MENU !->
+							<?= $this->render('_menu') ?>
+						<?php endif; ?>    
+						<!- SECTION !->
+						<?= Html::beginTag('section', ['class' => 'peers ai-s fxw-nw h-100vh']) ?>
+							<?= Html::beginTag('div', ['class' => ((Yii::$app->controller->action->id == 'signup') || 
+								(Yii::$app->controller->action->id == 'login')) ? 'container-fluid' : 'container']) ?>
+								<!- WIDGET-BREADCRUMBS !->
+								<?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ?
+									$this->params['breadcrumbs'] : []]) ?>
+								<!- SECTION-CONTENT !->
+								<?= Html::beginTag('section', ['class' => 'content']) ?>
+									<!- CONTENT !->
+									<?= $content ?>
+									<!- ALERT-WIDGET !->
+									<?= Alert::widget()?>
+								<?= Html::endTag('section') ?>
+								<!- END - SECTION-CONTENT !->
+							<?= Html::endTag('div') ?>        
+						<?= Html::endTag('section') ?>
+						<!- END - SECTION !->
+						<!- FOOTER !->
+						<?= $this->render('_footer') ?>                        
+				<?php endif; ?>
+			<?= Html::endTag('body') ?>
+			<!- END - BODY -!>
+		<?php $this->endBody() ?>
+	<?= Html::endTag('html') ?>
+	<!- END - HTML -!>
 <?php $this->endPage() ?>
 <!- END - BEGIN-PAGE -!>
 <!- END - MAIN -!>

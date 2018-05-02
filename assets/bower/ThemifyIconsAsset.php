@@ -21,22 +21,22 @@ use yii\web\AssetBundle;
 
 class ThemifyIconsAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/bower-asset/themify-icons/';
+	public $sourcePath = '@vendor/bower-asset/themify-icons/';
 
-    public $css = [
-        'css/themify-icons.css',
-    ];
+	public $css = [
+		'css/themify-icons.css',
+	];
 
-    public $publishOptions = [
-        'only' => [
-            'fonts/*',
-            'css/*',
-        ],
-        'except' => [
-            'png',
-            'src',
-            'less',
-            'scss',
-        ]
-    ];
+	public $publishOptions = [
+		'only' => [
+			'fonts/*',
+			'css/*',
+		],
+		'except' => [
+			'png',
+			'src',
+			'less',
+			'scss',
+		]
+	];
 }

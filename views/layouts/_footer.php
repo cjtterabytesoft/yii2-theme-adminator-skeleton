@@ -21,29 +21,29 @@ use yii\helpers\Html;
 
 <!- FOOTER !->
 <?= Html::beginTag('footer', ['class' => 'main-footer']) ?>
-    <?= Html::beginTag('div', ['class' => 'container bdT p-30 fsz-sm c-grey-600']) ?>
-        <?= Html::beginTag('div', ['class' => 'row']) ?>
-        	<?= Html::beginTag('div', ['class' => 'col-sm ta-l']) ?>
-            	<?= Html::tag('span', '', ['class' => 'ico far fa-copyright fa-w-16 fa-2x align-middle']) ?>
-            	<?= Html::tag('span', '&nbsp' . yii::$app->params['Author'], ['class' => 'align-middle']) ?>
-            <?= Html::endTag('div') ?>		    
-        	<?= Html::beginTag('div', ['class' => 'col-sm d-none d-lg-inline']) ?>
-       			<?= Html::tag('span', 'POWERED BY: ', ['class' => 'align-middle']) ?>
-       			<?= html::img(yii::$app->params['Logo-Yii'], ['class' => 'align-middle', 'style' => 'width:150px;']) ?>   
-            <?= Html::endTag('div') ?>		    
-        	<?= Html::beginTag('div', ['class' => 'col-sm ta-r d-none d-sm-inline']) ?>        
-				<?= Html::tag('span', Yii::t('adminskeleton', 'SOCIAL NETWORKS:'), 
-					['class' => 'align-middle','style' => 'padding-right: 5px']) ?>            
-				<?= Html::a('', yii::$app->params['Git_User'], 
-					['class' => 'ico fab fa-github fa-w-16 fa-2x align-middle', 'target' => '_blank']) ?>   
-				<?= Html::a('', yii::$app->params['Fac_User'], 
-					['class' => 'ico fab fab fa-facebook-f fa-w-16 fa-2x align-middle', 'target' => '_blank']) ?>
-				<?= Html::a('', yii::$app->params['Twi_User'], 
-					['class' => 'ico fab fa-twitter fa-w-16 fa-2x align-middle', 'target' => '_blank']) ?>                      
-				<?= Html::a('', yii::$app->params['Lin_User'], 
-					['class' => 'ico fab fab fa-linkedin-in fa-w-16 fa-2x align-middle', 'target' => '_blank']) ?> 
-           <?= Html::endTag('div') ?>		         
-        <?= Html::endTag('div') ?>
-    <?= Html::endTag('div') ?>
+	<?= Html::beginTag('div', ['class' => 'container bdT p-30 fsz-sm c-grey-600']) ?>
+		<?= Html::beginTag('div', ['class' => 'row']) ?>
+			<?= Html::beginTag('div', ['class' => 'col-sm ta-l']) ?>
+				<?= Html::tag('span', '', ['class' => 'ico far fa-copyright fa-w-16 fa-2x align-middle']) ?>
+				<?= Html::tag('span', '&nbsp' . yii::$app->params['Author'], ['class' => 'align-middle']) ?>
+			<?= Html::endTag('div') ?>
+			<?= Html::beginTag('div', ['class' => 'col-sm d-none d-lg-inline']) ?>
+				<?= Html::tag('span', 'POWERED BY: ', ['class' => 'align-middle']) ?>
+				<?= html::img(yii::$app->params['Logo-Yii'], ['class' => 'align-middle', 'style' => 'width:150px;']) ?>   
+			<?= Html::endTag('div') ?>
+			<?= Html::beginTag('div', ['class' => 'col-sm ta-r d-none d-sm-inline']) ?>        
+				<?= Html::tag('span', Yii::t('adminskeleton', 'SOCIAL NETWORKS:'),
+				['class' => 'align-middle','style' => 'padding-right: 5px']) ?>
+				<?= Html::a('', yii::$app->params['Git_User'],
+				['class' => 'ico fab fa-github fa-w-16 fa-2x align-middle', 'target' => '_blank']) ?>   
+				<?= Html::a('', yii::$app->params['Fac_User'],
+				['class' => 'ico fab fab fa-facebook-f fa-w-16 fa-2x align-middle', 'target' => '_blank']) ?>
+				<?= Html::a('', yii::$app->params['Twi_User'],
+				['class' => 'ico fab fa-twitter fa-w-16 fa-2x align-middle', 'target' => '_blank']) ?>
+				<?= Html::a('', yii::$app->params['Lin_User'],
+				['class' => 'ico fab fab fa-linkedin-in fa-w-16 fa-2x align-middle', 'target' => '_blank']) ?> 
+			<?= Html::endTag('div') ?>
+		<?= Html::endTag('div') ?>
+	<?= Html::endTag('div') ?>
 <?= Html::endTag('footer') ?>
 <!- END - FOOTER -!>
