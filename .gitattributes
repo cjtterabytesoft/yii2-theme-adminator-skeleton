@@ -3,5 +3,6 @@
 /.gitattributes     export-ignore
 /.scrutinizer.yml   export-ignore
 /.travis.yml        export-ignore
+/.composer.lock     export-ignore
 /docs               export-ignore
 *.css linguist-language=PHP
