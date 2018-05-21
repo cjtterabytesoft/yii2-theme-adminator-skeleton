@@ -29,14 +29,14 @@ class Bootstrap implements BootstrapInterface
 		/* Config Translation */
 		if (!isset($app->get('i18n')->translations['adminskeleton*'])) {
 			$app->get('i18n')->translations['adminskeleton*'] = [
-				'class'    => PhpMessageSource::className(),
+				'__class'    => PhpMessageSource::class,
 				'basePath' => __DIR__ . '/messages',
 			];
 		}
 		/* Config reCaptcha */
 		$app->set('reCaptcha', [
 			'name' => 'reCaptcha',
-			'class' => 'himiklab\yii2\recaptcha\ReCaptcha',
+			'__class' => 'himiklab\yii2\recaptcha\ReCaptcha::class',
 			'siteKey' => '6LeIIVYUAAAAAED16FV5lK5j0b1ro34cNUZbFURQ',
 			'secret' => '6LeIIVYUAAAAAOinzkRv0wB7Ta01VKT7DeSayRPc',
 		]);
@@ -49,9 +49,9 @@ class Bootstrap implements BootstrapInterface
 		}
 
 		/* Copy Avatar Images */
-		if (\yii\helpers\BaseFileHelper::filterPath(\Yii::getAlias('@frontend/web/images'), $options = [])) {
+		if (\yii\helpers\BaseFileHelper::filterPath(\Yii::getAlias('@public/adminskeleton/images'), $options = [])) {
 			\yii\helpers\BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/theme/adminskeleton/images/'),
-				\Yii::getAlias('@frontend/web/images'));
+				\Yii::getAlias('@public/adminskeleton/images'));
 		}
 	}
 }
