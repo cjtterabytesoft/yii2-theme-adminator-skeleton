@@ -15,7 +15,7 @@
 *     @since: 1.0
 **/
 
-use cjtterabytesoft\theme\adminskeleton\models\User;
+use cjtterabytesoft\theme\adminskeleton\forms\LoginForm;
 use yii\bootstrap4\ActiveForm;
 use yii\captcha\Captcha;
 use yii\helpers\Html;
@@ -26,7 +26,7 @@ $this->params['breadcrumbs_theme'][] = $this->title;
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap4\ActiveForm */
-/* @var $model cjtterabytesoft\theme\adminskeleton\models\User */
+/* @var $model cjtterabytesoft\theme\adminskeleton\forms\LoginForm */
 
 ?>
 
