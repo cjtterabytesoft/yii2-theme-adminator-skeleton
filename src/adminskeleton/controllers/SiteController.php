@@ -48,7 +48,7 @@ class SiteController extends Controller
 			'verbs' => [
 				'class' => VerbFilter::class,
 				'actions' => [
-					'logout' => ['POST'],
+					'/adminskeleton/site/logout' => ['POST'],
 				],
 			],
 		];

@@ -36,26 +36,26 @@ NavBar::begin([
 $menuItems = [
 	[
 	 'label' => Html::tag('i', '', ['class' => 'fa fa-home fa-lg']) . ' ' .
-				Yii::t('adminskeleton', 'Home'), 'url' => ['/site/index']
+				Yii::t('adminskeleton', 'Home'), 'url' => ['/adminskeleton/site/index']
 	],
 	[
 	 'label' => Html::tag('i', '', ['class' => 'fa fa-spinner fa-lg fa-spin']) . ' ' .
-				Yii::t('adminskeleton', 'About Us'), 'url' => ['/site/about']
+				Yii::t('adminskeleton', 'About Us'), 'url' => ['/adminskeleton/site/about']
 	],
 	[
 	 'label' => Html::tag('i', '', ['class' => 'fa fa-envelope fa-lg']) . ' ' .
-				Yii::t('adminskeleton', 'Contact'), 'url' => ['/site/contact']
+				Yii::t('adminskeleton', 'Contact'), 'url' => ['/adminskeleton/site/contact']
 	],
 ];
 
 if (Yii::$app->user->isGuest) {
 	$menuItems[] = [
 					'label' => Html::tag('i', '', ['class' => 'ion-android-person-add fa-lg']) . ' ' .
-							   Yii::t('adminskeleton', 'Signup'), 'url' => ['/site/signup']
+							   Yii::t('adminskeleton', 'Signup'), 'url' => ['/adminskeleton/site/signup']
 				   ];
 	$menuItems[] = [
 					'label' => Html::tag('i', '', ['class' => 'fa fa-sign-in fa-lg']) . ' ' .
-							   Yii::t('adminskeleton', 'Login'), 'url' => ['/site/login']
+							   Yii::t('adminskeleton', 'Login'), 'url' => ['/adminskeleton/site/login']
 				   ];
 	} else {
 		$baseimg = Yii::$app->session->get('user.avatar60');

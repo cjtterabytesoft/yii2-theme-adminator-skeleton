@@ -87,7 +87,7 @@ use yii\helpers\Url;
 									[
 									 'label' => html::tag('i', '', ['class' => 'ti-power-off mR-10']) .
 												html::tag('span', 'Logout'),
-									 'url' => Url::to(['/site/logout']),
+									 'url' => Url::to(['/adminskeleton/site/logout']),
 									 'linkOptions' => ['class' => 'd-b td-n pY-5 bgcH-grey-100 c-grey-700 fsz-sm' ,
 													   'data-method'=>'post']],
 									],
