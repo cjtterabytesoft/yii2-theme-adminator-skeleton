@@ -19,6 +19,8 @@ namespace cjtterabytesoft\theme\adminskeleton\controllers;
 
 use app\forms\ContactForm;
 use cjtterabytesoft\theme\adminskeleton\forms\LoginForm;
+use cjtterabytesoft\theme\adminskeleton\forms\SignupForm;
+
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
