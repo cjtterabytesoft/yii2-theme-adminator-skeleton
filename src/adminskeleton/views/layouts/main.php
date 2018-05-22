@@ -59,11 +59,9 @@ StyleAsset::register($this);
 				<?php if (!Yii::$app->user->isGuest): ?>
 					<!- DIV -!>
 					<?= Html::beginTag('div') ?>
-						<!- SIDEBAR !->
 						<?= $this->render('_sidebar') ?>
 						<!- PAGE-CONTAINER -!>
 						<?= Html::beginTag('div', ['class' => 'page-container']) ?>
-							<!- MENUSER !->
 							<?= $this->render('_menuser') ?>
 							<?= Html::beginTag('main', ['class' => 'main-content bgc-grey-100']) ?>
 								<!- CONTENT !->
@@ -71,22 +69,21 @@ StyleAsset::register($this);
 								<!- ALERT-WIDGET !->
 								<?= Alert::widget()?>
 							<?= Html::endTag('main') ?>
-							<!- FOOTER !->
 							<?= $this->render('_footer') ?>
 						<?= Html::endTag('div') ?>
 						<!- END - PAGE-CONTAINER -!>
 					<?= Html::endTag('div') ?>
 					<!- END - DIV -!>
 					<?php else: ?>
-						<?php if ((Yii::$app->controller->action->id !== 'signup') && 
-							(Yii::$app->controller->action->id !== 'login')): ?>
-							<!- MENU !->
-							<?= $this->render('_menu') ?>
-						<?php endif; ?>    
 						<!- SECTION !->
-						<?= Html::beginTag('section', ['class' => 'peers ai-s fxw-nw h-100vh']) ?>
-							<?= Html::beginTag('div', ['class' => ((Yii::$app->controller->action->id == 'signup') || 
-								(Yii::$app->controller->action->id == 'login')) ? 'container-fluid' : 'container']) ?>
+						<?= Html::beginTag('wrapper', ['class' => 'd-flex flex-column']) ?>
+							<?php if ((Yii::$app->controller->action->id !== 'signup') && 
+								(Yii::$app->controller->action->id !== 'login')): ?>
+								<?= $this->render('_menu') ?>
+							<?php endif; ?>    
+							<?= Html::beginTag('main', ['class' => ((Yii::$app->controller->action->id == 'signup') || 
+								(Yii::$app->controller->action->id == 'login')) ? 'container-fluid flex-fill' 
+								: 'container flex-fill']) ?>
 								<!- WIDGET-BREADCRUMBS !->
 								<?= Breadcrumbs::widget(['links' => isset($this->params['breadcrumbs']) ?
 									$this->params['breadcrumbs'] : []]) ?>
@@ -98,11 +95,10 @@ StyleAsset::register($this);
 									<?= Alert::widget()?>
 								<?= Html::endTag('section') ?>
 								<!- END - SECTION-CONTENT !->
-							<?= Html::endTag('div') ?>        
-						<?= Html::endTag('section') ?>
-						<!- END - SECTION !->
-						<!- FOOTER !->
-						<?= $this->render('_footer') ?>                        
+							<?= Html::endTag('main') ?>        
+							<?= $this->render('_footer') ?>    							
+						<?= Html::endTag('wrapper') ?>
+						<!- END - SECTION !->                    
 				<?php endif; ?>
 			<?= Html::endTag('body') ?>
 			<!- END - BODY -!>
