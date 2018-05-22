@@ -15,7 +15,6 @@
 *     @since: 1.0
 **/
 
-use cjtterabytesoft\theme\adminskeleton\forms\LoginForm;
 use yii\bootstrap4\ActiveForm;
 use yii\captcha\Captcha;
 use yii\helpers\Html;

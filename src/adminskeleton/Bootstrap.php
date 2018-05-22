@@ -38,7 +38,7 @@ class Bootstrap implements BootstrapInterface
 		if (!Yii::$app->user->isGuest) {
 			yii::$app->defaultRoute = ('/adminskeleton/pages/dashboard');
 			} else {
-				yii::$app->defaultRoute = ('site/index');
+				yii::$app->defaultRoute = ('/adminskeleton/site/index');
 		}
 
 		/* Copy Avatar Images */
