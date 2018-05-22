@@ -30,14 +30,14 @@
 /* WRAP                                                                                                               */
 /*--------------------------------------------------------------------------------------------------------------------*/
 
-.wrap {
-    min-height: calc(100vh - 90px);
+.wrapper {
+    min-height: 100vh;
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
 }
 
-.wrap > .container {
+.wrapper > .container {
     padding: 70px 15px 20px;
 }
 
