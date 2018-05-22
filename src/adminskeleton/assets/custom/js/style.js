@@ -17,14 +17,6 @@
 * BootBox
 ***********************************************************************************************************************/
 
-(function ($) {
-    yii.confirm = function(message, ok, cancel) {
-        bootbox.confirm(message, function(result) {
-            if (result) { !ok || ok(); } else { !cancel || cancel(); }
-        });
-    }
-})(window.jQuery);
-
 window.addEventListener('load', () => {
     const loader = document.getElementById('loader');
     setTimeout(() => {loader.classList.add('fadeOut');}, 400);

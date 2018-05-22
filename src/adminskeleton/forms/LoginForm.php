@@ -17,6 +17,7 @@
 
 namespace cjtterabytesoft\theme\adminskeleton\forms;
 
+use app\models\User;
 use Yii;
 use yii\base\Model;
 
@@ -48,7 +49,7 @@ class LoginForm extends Model
 			// password is validated by validatePassword()
 			['password', 'validatePassword'],
 			// verifyCode needs to be entered correctly
-			['verifyCode', 'captcha'],
+			//['verifyCode', 'captcha'],
 		];
 	}
 	
