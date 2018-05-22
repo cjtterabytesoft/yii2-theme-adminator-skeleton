@@ -15,13 +15,18 @@
 *     @since: 1.0
 **/
 
-use himiklab\yii2\recaptcha\ReCaptcha;
+use cjtterabytesoft\theme\adminskeleton\models\User;
 use yii\bootstrap4\ActiveForm;
+use yii\captcha\Captcha;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 
 $this->title = 'Login';
 $this->params['breadcrumbs_theme'][] = $this->title;
+
+/* @var $this yii\web\View */
+/* @var $form yii\bootstrap4\ActiveForm */
+/* @var $model cjtterabytesoft\theme\adminskeleton\models\User */
 
 ?>
 
@@ -44,7 +49,9 @@ $this->params['breadcrumbs_theme'][] = $this->title;
 			<?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 			<?= $form->field($model, 'password')->passwordInput() ?>
 			<?= $form->field($model, 'rememberMe')->checkbox() ?>
-			<?= $form->field($model, 'reCaptcha')->widget(\himiklab\yii2\recaptcha\ReCaptcha::class) ?>
+			<?= $form->field($model, 'verifyCode')->widget(Captcha::class, [
+				'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+			]) ?>
 			<?= Html::beginTag('div', ['style' => 'color:#999;margin:1em 0']) ?>
 				If you forgot your password you can <?= Html::a('reset it', ['site/request-password-reset']) ?>.
 			<?= Html::endTag('div') ?>

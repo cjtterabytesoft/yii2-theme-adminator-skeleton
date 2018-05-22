@@ -33,13 +33,6 @@ class Bootstrap implements BootstrapInterface
 				'basePath' => __DIR__ . '/messages',
 			];
 		}
-		/* Config reCaptcha */
-		$app->set('reCaptcha', [
-			'name' => 'reCaptcha',
-			'__class' => 'himiklab\yii2\recaptcha\ReCaptcha::class',
-			'siteKey' => '6LeIIVYUAAAAAED16FV5lK5j0b1ro34cNUZbFURQ',
-			'secret' => '6LeIIVYUAAAAAOinzkRv0wB7Ta01VKT7DeSayRPc',
-		]);
 
 		/* Default Controller Theme */
 		if (!Yii::$app->user->isGuest) {

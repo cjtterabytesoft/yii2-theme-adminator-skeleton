@@ -15,13 +15,18 @@
 *     @since: 1.0
 **/
 
-use himiklab\yii2\recaptcha\ReCaptcha;
+use cjtterabytesoft\theme\adminskeleton\models\User;
 use yii\bootstrap4\ActiveForm;
+use yii\captcha\Captcha;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 
 $this->title = 'Register';
 $this->params['breadcrumbs_theme'][] = $this->title;
+
+/* @var $this yii\web\View */
+/* @var $form yii\bootstrap4\ActiveForm */
+/* @var $model cjtterabytesoft\theme\adminskeleton\models\User */
 
 ?>
 
@@ -44,7 +49,9 @@ $this->params['breadcrumbs_theme'][] = $this->title;
 			<?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
 			<?= $form->field($model, 'email') ?>
 			<?= $form->field($model, 'password')->passwordInput() ?>
-			<?= $form->field($model, 'reCaptcha')->widget(\himiklab\yii2\recaptcha\ReCaptcha::className()) ?>        
+			<?= $form->field($model, 'verifyCode')->widget(Captcha::class, [
+				'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+			]) ?>
 			<?= Html::beginTag('div', ['class' => 'form-group']) ?>
 				<?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
 			<?= Html::endTag('div') ?>
