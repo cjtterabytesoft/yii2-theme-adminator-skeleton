@@ -37,7 +37,7 @@ use yii\helpers\ArrayHelper;
  * @author Alexander Kochetov <creocoder@gmail.com>
  * @since 2.0
  */
-class NavBar extends Widget
+class NavBar extends \yii\bootstrap4\Widget
 {
 	/**
 	 * @var array the HTML attributes for the widget container tag. The following special options are recognized:
