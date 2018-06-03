@@ -17,7 +17,7 @@
 **/
 
 use yii\bootstrap4\Nav;
-use yii\bootstrap4\NavBar;
+use cjtterabytesoft\theme\adminskeleton\widgets\NavBar;
 use yii\helpers\Html;
 
 ?>
