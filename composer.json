@@ -13,7 +13,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.1.0",
-        "yiisoft/yii2-bootstrap4": "~1.0.0",       
+        "yiisoft/yii2-bootstrap4": "~2.0.0",       
         "bower-asset/bootbox": "*",
         "bower-asset/Font-Awesome": "*",
         "bower-asset/ionicons": "*",
