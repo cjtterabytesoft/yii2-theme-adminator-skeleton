@@ -21,7 +21,7 @@ use Yii;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
-class NavBar extends \yii\bootstrap4\Widget
+class NavBar extends \yii\bootstrap4\Navbar
 {
 	/**
 	 * Initializes the widget.
