@@ -36,10 +36,10 @@ class AdminatorAsset extends AssetBundle
 	public $depends = [
 		\yii\jquery\JqueryAsset::class,
 		\yii\bootstrap4\BootstrapAsset::class,
-		\yii\bootstrap4\BootstrapPluginAsset:class,
-		\cjtterabytesoft\theme\adminskeleton\assets\bower\BootBoxAsset:class,
-		\cjtterabytesoft\theme\adminskeleton\assets\bower\FontAwesomeAsset:class,
-		\cjtterabytesoft\theme\adminskeleton\assets\bower\ThemifyIconsAsset:class,
+		\yii\bootstrap4\BootstrapPluginAsset::class,
+		\cjtterabytesoft\theme\adminskeleton\assets\bower\BootBoxAsset::class,
+		\cjtterabytesoft\theme\adminskeleton\assets\bower\FontAwesomeAsset::class,
+		\cjtterabytesoft\theme\adminskeleton\assets\bower\ThemifyIconsAsset::class,
 	];
 
 	public $publishOptions = [
