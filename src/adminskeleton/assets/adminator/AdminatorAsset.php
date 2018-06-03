@@ -34,7 +34,7 @@ class AdminatorAsset extends AssetBundle
 	];
 
 	public $depends = [
-		\yii\jquery\JqueryAsset::class
+		\yii\jquery\JqueryAsset::class,
 		\yii\bootstrap4\BootstrapAsset::class,
 		\yii\bootstrap4\BootstrapPluginAsset:class,
 		\cjtterabytesoft\theme\adminskeleton\assets\bower\BootBoxAsset:class,
