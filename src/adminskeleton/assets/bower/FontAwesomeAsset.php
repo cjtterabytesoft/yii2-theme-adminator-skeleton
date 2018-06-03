@@ -3,7 +3,7 @@
 /**
 * This file is part of the CJTTERABYTESOFT yii2-theme-adminator-skeleton
 *
-* (c) CJT TERABYTE LLC yii2-theme-adminator-skeleton 
+* (c) CJT TERABYTE LLC yii2-theme-adminator-skeleton
 * For the full copyright and license information, please view the LICENSE.md
 * file that was distributed with this source code
 *
@@ -13,6 +13,7 @@
 *     @theme: [yii2-theme-adminator-skeleton]
 *    @assets: [FontAwesomeAsset]
 *     @since: 1.0
+*       @yii: 2.1
 **/
 
 namespace cjtterabytesoft\theme\adminskeleton\assets\bower;

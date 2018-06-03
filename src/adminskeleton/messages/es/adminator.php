@@ -13,6 +13,7 @@
 *     @theme: [yii2-theme-adminator-skeleton]
 *  @language: [Spanish]
 *     @since: 1.0
+*       @yii: 2.1
 **/
 
 return [

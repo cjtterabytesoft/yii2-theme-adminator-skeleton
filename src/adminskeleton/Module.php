@@ -13,6 +13,7 @@
 *         @theme: [yii2-theme-adminator-skeleton]
 * @Configuration: [Module]
 *         @since: 1.0
+*           @yii: 2.1
 */
 
 namespace cjtterabytesoft\theme\adminskeleton;
@@ -22,6 +23,5 @@ use yii\base\Module as BaseModule;
 
 class Module extends BaseModule
 {
-    const VERSION = '0.0.1-dev';
-    public $defaultRoute = 'pages';
+	const VERSION = '0.0.1-dev';
 }

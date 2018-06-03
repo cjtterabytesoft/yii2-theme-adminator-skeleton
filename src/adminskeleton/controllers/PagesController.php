@@ -7,12 +7,13 @@
 * For the full copyright and license information, please view the LICENSE.md
 * file that was distributed with this source code
 *
-*      @link: https://github.com/cjtterabytesoft/yii2-theme-adminator-skeleton
-*    @author: Wilmer Arámbula <cjtterabytellc@gmail.com>
-* @copyright: (c) CJT TERABYTE LLC
-*     @theme: [yii2-theme-adminator-skeleton]
-*@controller: [PagesController]
-*     @since: 1.0
+*       @link: https://github.com/cjtterabytesoft/yii2-theme-adminator-skeleton
+*     @author: Wilmer Arámbula <cjtterabytellc@gmail.com>
+*  @copyright: (c) CJT TERABYTE LLC
+*      @theme: [yii2-theme-adminator-skeleton]
+* @controller: [PagesController]
+*      @since: 1.0
+*        @yii: 2.1
 **/
 
 namespace cjtterabytesoft\theme\adminskeleton\controllers;
@@ -25,10 +26,6 @@ use yii\filters\VerbFilter;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 
-/**
-* PagesController
-**/
-
 class PagesController extends Controller
 {
 
@@ -38,7 +35,7 @@ class PagesController extends Controller
 	{
 		return [
 			'error' => [
-				'class' => 'yii\web\ErrorAction',
+				'__class' => yii\web\ErrorAction::class,
 			],
 		];
 	}

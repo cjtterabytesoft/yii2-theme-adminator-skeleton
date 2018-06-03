@@ -13,6 +13,7 @@
 *         @theme: [yii2-theme-adminator-skeleton]
 * @Configuration: [Bootstrap]
 *         @since: 1.0
+*           @yii: 2.1
 */
 
 namespace cjtterabytesoft\theme\adminskeleton;
@@ -26,12 +27,22 @@ class Bootstrap implements BootstrapInterface
 	/** @inheritdoc */
 	public function bootstrap($app)
 	{
+		/* Config Mailer */
+		Yii::$app->mailer->composer->setViewPath('@cjtterabytesoft/theme/adminskeleton/mail');
+
+
 		/* Config Translation */
 		if (!isset($app->get('i18n')->translations['adminskeleton*'])) {
 			$app->get('i18n')->translations['adminskeleton*'] = [
 				'__class'    => PhpMessageSource::class,
 				'basePath' => __DIR__ . '/messages',
 			];
+		}
+
+		/* Copy Avatar Images */
+		if (\yii\helpers\BaseFileHelper::filterPath(\Yii::getAlias('@public/images'), $options = [])) {
+			\yii\helpers\BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/theme/adminskeleton/images/'),
+				\Yii::getAlias('@public/images'));
 		}
 
 		/* Default Controller Theme */
@@ -41,10 +52,5 @@ class Bootstrap implements BootstrapInterface
 				yii::$app->defaultRoute = ('/adminskeleton/site/index');
 		}
 
-		/* Copy Avatar Images */
-		if (\yii\helpers\BaseFileHelper::filterPath(\Yii::getAlias('@public/adminskeleton/images'), $options = [])) {
-			\yii\helpers\BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/theme/adminskeleton/images/'),
-				\Yii::getAlias('@public/adminskeleton/images'));
-		}
 	}
 }

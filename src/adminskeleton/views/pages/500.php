@@ -13,6 +13,7 @@
 *     @theme: [yii2-theme-adminator-skeleton]
 *      @view: pages[500]
 *     @since: 1.0
+*       @yii: 2.1
 **/
 
 use yii\helpers\Html;

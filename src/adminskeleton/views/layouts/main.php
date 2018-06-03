@@ -13,6 +13,7 @@
 *     @theme: [yii2-theme-adminator-skeleton]
 *      @view: layout[Main]
 *     @since: 1.0
+*       @yii: 2.1
 **/
 
 use cjtterabytesoft\theme\adminskeleton\assets\adminator\AdminatorAsset;

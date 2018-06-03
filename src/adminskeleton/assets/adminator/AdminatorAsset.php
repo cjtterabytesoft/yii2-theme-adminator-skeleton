@@ -3,7 +3,7 @@
 /**
 * This file is part of the CJTTERABYTESOFT yii2-theme-adminator-skeleton
 *
-* (c) CJT TERABYTE LLC yii2-theme-adminator-skeleton 
+* (c) CJT TERABYTE LLC yii2-theme-adminator-skeleton
 * For the full copyright and license information, please view the LICENSE.md
 * file that was distributed with this source code
 *
@@ -13,6 +13,7 @@
 *     @theme: [yii2-theme-adminator-skeleton]
 *    @assets: [AdminatorAsset]
 *     @since: 1.0
+*       @yii: 2.1
 **/
 
 namespace cjtterabytesoft\theme\adminskeleton\assets\adminator;
@@ -33,12 +34,12 @@ class AdminatorAsset extends AssetBundle
 	];
 
 	public $depends = [
-		'yii\jquery\JqueryAsset',
-		'yii\bootstrap4\BootstrapAsset',
-		'yii\bootstrap4\BootstrapPluginAsset',
-		'cjtterabytesoft\theme\adminskeleton\assets\bower\BootBoxAsset',
-		'cjtterabytesoft\theme\adminskeleton\assets\bower\FontAwesomeAsset',
-		'cjtterabytesoft\theme\adminskeleton\assets\bower\ThemifyIconsAsset',
+		\yii\jquery\JqueryAsset::class
+		\yii\bootstrap4\BootstrapAsset::class,
+		\yii\bootstrap4\BootstrapPluginAsset:class,
+		\cjtterabytesoft\theme\adminskeleton\assets\bower\BootBoxAsset:class,
+		\cjtterabytesoft\theme\adminskeleton\assets\bower\FontAwesomeAsset:class,
+		\cjtterabytesoft\theme\adminskeleton\assets\bower\ThemifyIconsAsset:class,
 	];
 
 	public $publishOptions = [

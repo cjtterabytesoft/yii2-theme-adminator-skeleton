@@ -13,6 +13,7 @@
 *     @theme: [yii2-theme-adminator-skeleton]
 *     @forms: models[SignupForm]
 *     @since: 1.0
+*       @yii: 2.1
 **/
 
 namespace cjtterabytesoft\theme\adminskeleton\forms;
@@ -20,9 +21,6 @@ namespace cjtterabytesoft\theme\adminskeleton\forms;
 use yii\base\Model;
 use app\models\User;
 
-/**
- * Signup form
- */
 class SignupForm extends Model
 {
 	public $username;

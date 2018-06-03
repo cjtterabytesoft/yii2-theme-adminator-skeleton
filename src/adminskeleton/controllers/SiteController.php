@@ -13,6 +13,7 @@
 *      @theme: [yii2-theme-adminator-skeleton]
 * @controller: [SiteController]
 *      @since: 1.0
+*        @yii: 2.1
 **/
 
 namespace cjtterabytesoft\theme\adminskeleton\controllers;
