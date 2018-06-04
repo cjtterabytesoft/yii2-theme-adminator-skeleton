@@ -44,13 +44,5 @@ class Bootstrap implements BootstrapInterface
 			\yii\helpers\BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/theme/adminskeleton/images/'),
 				\Yii::getAlias('@public/images'));
 		}
-
-		/* Default Controller Theme */
-		if (!Yii::$app->user->isGuest) {
-			yii::$app->defaultRoute = ('/adminskeleton/pages/dashboard');
-			} else {
-				yii::$app->defaultRoute = ('/adminskeleton/site/index');
-		}
-
 	}
 }

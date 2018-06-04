@@ -21,6 +21,7 @@ namespace cjtterabytesoft\theme\adminskeleton\controllers;
 use app\forms\ContactForm;
 use cjtterabytesoft\theme\adminskeleton\forms\LoginForm;
 use cjtterabytesoft\theme\adminskeleton\forms\SignupForm;
+use cjtterabytesoft\theme\adminskeleton\forms\PasswordResetRequestForm;
 
 use Yii;
 use yii\filters\AccessControl;
@@ -87,7 +88,12 @@ class SiteController extends Controller
 	
 	public function actionIndex()
 	{
-		return $this->render('index');
+		if (!Yii::$app->user->isGuest) {
+			return $this->render('dashboard');
+			} else {
+				return $this->render('index');
+		} 
+		
 	}
 	
 	/**
@@ -102,7 +108,7 @@ class SiteController extends Controller
 			return $this->goHome();
 		}
 		$model = new LoginForm();
-		if ($model->load(Yii::$app->request->post()) && $model->login()) {
+		if ($model->load(Yii::$app->request->post()) && $model->login()) {   
 			return $this->goBack();
 		}
 		$model->password = '';
@@ -217,5 +223,16 @@ class SiteController extends Controller
 		return $this->render('resetPassword', [
 			'model' => $model,
 		]);
+	}
+
+	/**
+	* Displays dashboard page.
+	*
+	* @return string
+	*/
+
+	public function actionDashboard()
+	{
+		return $this->render('dashboard');
 	}
 }
